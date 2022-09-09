@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
+const hitters = require('./services/hitters')
 
 require('dotenv').config()
 
@@ -20,6 +21,8 @@ connection.once('open', () => {
 const usersRouter = require('./routes/users')
 
 app.use('/users', usersRouter)
+
+app.get('/hitterStats', hitters.getHitterStats)
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
