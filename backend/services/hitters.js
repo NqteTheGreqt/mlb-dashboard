@@ -6,7 +6,7 @@ function getHitterStats(req, res) {
     console.log(req.query.player_id)
     const options = {
         method: 'GET',
-        url: `${constants.host}json/named.sport_hitting_tm.bam?league_list_id='mlb'&game_type='R'&season='${req.query.season}'&player_id='${req.query.player_id}'`
+        url: `${constants.host}/json/named.sport_hitting_tm.bam?league_list_id='mlb'&game_type='R'&season='${req.query.season}'&player_id='${req.query.player_id}'`
     };
 
     axios.request(options).then((response) => {

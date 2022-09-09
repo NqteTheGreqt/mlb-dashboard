@@ -1,3 +1,3 @@
-const host = 'http://lookup-service-prod.mlb.com/'
+const host = 'http://lookup-service-prod.mlb.com'
 
 module.exports = { host }
