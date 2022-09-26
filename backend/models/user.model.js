@@ -6,12 +6,10 @@ const hittersSchema = new Schema({ id: String, name: String})
 const pitchersSchema = new Schema({ id: String, name: String })
 
 const userSchema = new Schema({
-    username: {
+    email: {
         type: String,
         required: true,
-        unique: true,
-        trim: true,
-        minlength: 3
+        unique: true
     }, hitters: Array,
     pitchers: Array
 }, {

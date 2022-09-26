@@ -4,6 +4,7 @@ import React from 'react';
 import { Provider, connect } from "react-redux";
 
 import Login from "./components/login.component";
+import PlayersList from './components/players-list.component';
 
 import { loginAction } from "./actions/loginAction";
 import { logoutAction } from "./actions/logoutAction";
@@ -26,6 +27,7 @@ function App() {
   return (
     <Provider store={configureStore()}>
       <Container />
+      <PlayersList/>
     </Provider>
   );
 };

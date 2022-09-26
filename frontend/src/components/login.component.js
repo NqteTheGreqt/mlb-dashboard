@@ -16,6 +16,7 @@ const Login = (props) => {
       console.log(`Encoded JWT ID token: ${response.credential}`);
       let userObject = jwt_decode(response.credential);
       setUser(userObject);
+      localStorage.setItem('user', userObject.email);
       props.loginAction();
     }
 
@@ -42,6 +43,7 @@ const Login = (props) => {
         <div>
           <img src={user.picture} alt="profile"></img>
           <h3>{user.name}</h3>
+          <p>{console.log(Object.keys(user))}</p>
         </div>
       }
     </div>
